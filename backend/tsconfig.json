@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* Language & Environment */
+    "target": "ES2020",                        /* Use modern JS output for Node.js */
+    "module": "commonjs",                      /* CommonJS modules for Node.js */
+    "lib": ["ES2020"],                         /* Use latest ECMAScript features */
+    "moduleResolution": "node",                /* Resolve modules like Node.js */
+
+    /* Project Structure */
+    "rootDir": "./src",                        /* Where your TypeScript source files live */
+    "outDir": "./dist",                        /* Where compiled JavaScript goes */
+    "resolveJsonModule": true,                 /* Allow importing .json files */
+
+    /* Type Checking */
+    "strict": true,                            /* Enable all strict type checks */
+    "esModuleInterop": true,                   /* Fix for `import express from "express"` */
+    "skipLibCheck": true,                      /* Skip type checking of .d.ts files */
+    "forceConsistentCasingInFileNames": true,  /* Enforce consistent file names */
+
+    /* Node.js Specific */
+    "types": ["node"],                         /* Include Node.js types */
+    "allowSyntheticDefaultImports": true       /* Allow default imports for CommonJS modules */
+  },
+  "include": [
+    "src/**/*",                                /* All your source files */
+    "src/knexfile.ts",                             /* Knex config file */
+    "migrations/**/*.ts"                       /* Optional: Knex migrations */
+  ],
+  "exclude": [
+    "node_modules", 
+    "dist"                                     /* Don’t compile built files again */
+  ]
+}
